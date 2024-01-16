@@ -1,0 +1,21 @@
+<section>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div *ngFor="let personne of listPersonne">
+            <div class="col">
+              <div class="card">
+                <img src="{{personne.lienImg}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{personne.prenom}} {{personne.nom}}</h5>
+                  <p class="card-text">{{personne.description}}</p>
+                </div>
+                <div class="card-footer icon-container">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-twitter"></i></a>
+                  <a href=""><i class="bi bi-tiktok"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+</section>

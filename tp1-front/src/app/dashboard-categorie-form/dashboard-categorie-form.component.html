@@ -1,0 +1,14 @@
+<section>
+    <h1>{{title}}</h1>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group form-component">
+            <label for="nom">Nom : </label>
+            <input type="text" class="form-control" id="nom" name="nom" [(ngModel)] = "categorie.nom">
+        </div>
+    
+        <div class="form-component">
+            <button class="btn btn-success" type="submit">Ajouter</button>
+        </div>
+    </form>
+</section>

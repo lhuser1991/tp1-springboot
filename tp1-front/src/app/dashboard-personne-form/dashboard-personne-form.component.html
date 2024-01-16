@@ -1,0 +1,36 @@
+<section>
+    <h1>{{title}}</h1>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group form-component">
+            <label for="nom">Nom : </label>
+            <input type="text" class="form-control" id="nom" name="nom" [(ngModel)] = "personne.nom">
+        </div>
+
+        <div class="form-group form-component">
+            <label for="prenom">Prenom : </label>
+            <input type="text" class="form-control" id="prenom" name="prenom" [(ngModel)] = "personne.prenom">
+        </div>
+
+        <div class="form-group form-component">
+            <label for="description">Description : </label>
+            <input type="text" class="form-control" id="description" name="description" [(ngModel)] = "personne.description">
+        </div>
+
+        <div class="form-group form-component">
+            <label for="lienImg">Lien de l'image : </label>
+            <input type="text" class="form-control" id="lienImg" name="lienImg" [(ngModel)] = "personne.lienImg">
+        </div>
+
+        <div class="form-group form-component">
+            <label for="categorie">Catégorie du produit : </label>
+            <select name="categorie" id="categorie" class="form-control" [(ngModel)] = "personne.idCategorie">
+                <option *ngFor="let categorie of listCategorie" [ngValue]="categorie.id">{{categorie.nom}}</option>
+            </select>
+        </div>
+    
+        <div class="form-component">
+            <button class="{{titleButtonColor}}" type="submit">{{titleButton}}</button>
+        </div>
+    </form>
+</section>

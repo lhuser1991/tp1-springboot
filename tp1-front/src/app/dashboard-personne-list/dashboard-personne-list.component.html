@@ -1,0 +1,28 @@
+<section>
+    <h1>{{title}}</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-center">Nom</th>
+                <th class="text-center">Prenom</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let personne of listPersonne">
+                <td class="text-center">{{personne.nom}}</td>
+                <td class="text-center">{{personne.prenom}}</td>
+                <td class="text-center button-container">
+                    <button (click) = "updatePersonne(personne.id)" class="btn btn-warning button">Modifier</button>
+                    <button (click) = "deletePersonne(personne.id)" class="btn btn-danger button">Supprimer</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="button-container">
+        <button type="button" class="btn btn-primary" (click)="goToDashboard()">Retour au dashboard</button>
+        <button type="button" class="btn btn-success" (click)="goToCreatePersonne()">Ajouter une personne</button>
+    </div>
+
+</section>

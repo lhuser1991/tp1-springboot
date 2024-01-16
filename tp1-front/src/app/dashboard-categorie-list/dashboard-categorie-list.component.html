@@ -1,0 +1,26 @@
+<section>
+    <h1>{{title}}</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-center">Nom</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let categorie of listCategorie">
+                <td class="text-center">{{categorie.nom}}</td>
+                <td class="text-center button-container">
+                    <button (click) = "updateCategorie(categorie.id)" class="btn btn-warning button">Modifier</button>
+                    <button (click) = "deleteCategorie(categorie.id)" class="btn btn-danger button">Supprimer</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="button-container">
+        <button type="button" class="btn btn-primary" (click)="goToDashboard()">Retour au dashboard</button>
+        <button type="button" class="btn btn-success" (click)="goToCreateCategorie()">Ajouter une categorie</button>
+    </div>
+
+</section>
